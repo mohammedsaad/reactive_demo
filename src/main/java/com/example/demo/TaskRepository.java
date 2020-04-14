@@ -1,10 +1,13 @@
 package com.example.demo;
 
+import io.reactivex.Flowable;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 public interface TaskRepository {
-   List<Task> getTasks();
+
+   Flowable<Task> getTasks();
+
 }
